@@ -1,25 +1,12 @@
 <template>
   <div class="reverse">
     <div class="page-container">
-      <md-app md-waterfall md-mode="flexible">
-        <md-app-toolbar class="md-large md-primary">
-          <div class="md-toolbar-row">
-            <div class="md-toolbar-section-start">
-              <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
-                <md-icon>menu</md-icon>
-              </md-button>
-            </div>
-
-            <div class="md-toolbar-section-end">
-              <md-button class="md-icon-button">
-                <md-icon>more_vert</md-icon>
-              </md-button>
-            </div>
-          </div>
-
-          <div class="md-toolbar-row md-toolbar-offset">
-            <span class="md-display-1">My Title</span>
-          </div>
+      <md-app md-mode="reveal">
+        <md-app-toolbar class="md-primary">
+          <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
+            <md-icon>menu</md-icon>
+          </md-button>
+          <span class="md-title">My Title</span>
         </md-app-toolbar>
 
         <md-app-drawer :md-active.sync="menuVisible">
@@ -49,24 +36,22 @@
         </md-app-drawer>
 
         <md-app-content>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          </md-app-content>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        </md-app-content>
       </md-app>
     </div>
 
@@ -78,12 +63,12 @@
 <script>
 export default {
   name: 'Reverse',
-  data: () => ({
-    menuVisible: false
-  }),
+  data() {
+    return {  menuVisible: false
+    }
+  }
 }
 </script>
-
 
 <style lang="scss" scoped>
 h1, h2 {
@@ -100,18 +85,16 @@ li {
 a {
   color: #42b983;
 }
-.md-app {
-  max-height: 400px;
-  border: 1px solid rgba(#000, .12);
-}
 
-.md-app-toolbar {
-  height: 196px;
+.md-app {
+  height: 100% ;
+  width: 100%;
+
 }
 
 .md-drawer {
-     width: 230px;
-     max-width: calc(100vw - 125px);
+  width: 230px;
+  max-width: calc(100vw - 125px);
 }
 
 </style>
